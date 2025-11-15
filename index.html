@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savings Group</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="container">
+    <h1>Savings Group - Play-to-Earn Fund</h1>
+
+    <div class="registration">
+      <h2>Student Registration</h2>
+      <form id="registrationForm">
+        <label>Name: <input type="text" id="studentName" required></label>
+        <label>Tier:
+          <select id="tierSelect">
+            <option value="1">Tier 1 - ₦10,000 (5%/week)</option>
+            <option value="2">Tier 2 - ₦20,000 (10%/week)</option>
+            <option value="3">Tier 3 - ₦30,000 (20%/week)</option>
+          </select>
+        </label>
+        <label>Amount: <input type="number" id="amountInput" required readonly></label>
+        <button type="submit">Add Student</button>
+      </form>
+      <p id="message" class="message"></p>
+    </div>
+
+    <div class="dashboard">
+      <h2>Savings Dashboard</h2>
+      <button id="simulateWeekBtn">Simulate Week</button>
+      <h3>Total Saved: <span id="totalSaved">₦0</span></h3>
+      <table id="membersTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Tier</th>
+            <th>Base Amount</th>
+            <th>Accumulated Interest</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
